@@ -1,0 +1,10 @@
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\bin\Debug\OutlookEmailParsing.exe.config
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\bin\Debug\OutlookEmailParsing.exe
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\bin\Debug\OutlookEmailParsing.pdb
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\obj\Debug\OutlookEmailParsing.csprojResolveAssemblyReference.cache
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\obj\Debug\OutlookEmailParsing.exe
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\obj\Debug\OutlookEmailParsing.pdb
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\bin\Debug\Logging.dll
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\bin\Debug\Logging.pdb
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\bin\Debug\OutlookEmailParsing.exe.CodeAnalysisLog.xml
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\OutlookEmailParsing\bin\Debug\OutlookEmailParsing.exe.lastcodeanalysissucceeded
