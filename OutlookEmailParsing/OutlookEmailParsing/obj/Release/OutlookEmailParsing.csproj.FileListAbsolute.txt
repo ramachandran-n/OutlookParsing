@@ -17,3 +17,6 @@ C:\Users\Ramachandran\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\
 C:\Users\Ramachandran\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\bin\Release\OutlookEmailParsing.exe.config
 C:\Users\Ramachandran\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\obj\Release\OutlookEmailParsing.exe
 C:\Users\Ramachandran\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\obj\Release\OutlookEmailParsing.pdb
+C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\bin\Release\OutlookEmailParsing.exe.config
+C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\obj\Release\OutlookEmailParsing.exe
+C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\obj\Release\OutlookEmailParsing.pdb
