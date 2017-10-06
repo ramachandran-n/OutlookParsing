@@ -118,6 +118,7 @@ namespace OutlookEmailParsing
                     if (mail is Microsoft.Office.Interop.Outlook.MailItem && mail.UnRead)
                     {
                         mails.Add(mail as MailItem);
+                        mail.UnRead = false;
                         if(mail.Attachments.Count > 0)
                         {
                             string sub = mail.Subject.ToString().Replace("FW:","").Replace("RE:","").Trim();
