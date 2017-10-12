@@ -1,1 +1,1 @@
-
+This is an utility that helps to parse the mails from the outlook and fetch the attachments in a specified folder & extracts the sender, subject, mail content (body), received time and a flag that speficies whether the mail has attachments or not.
