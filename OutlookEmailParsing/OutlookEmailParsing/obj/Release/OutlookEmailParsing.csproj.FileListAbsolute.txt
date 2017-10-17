@@ -20,3 +20,8 @@ C:\Users\Ramachandran\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEma
 C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\bin\Release\OutlookEmailParsing.exe.config
 C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\obj\Release\OutlookEmailParsing.exe
 C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\obj\Release\OutlookEmailParsing.pdb
+C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\bin\Release\OutlookEmailParsing.exe
+C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\bin\Release\OutlookEmailParsing.pdb
+C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\bin\Release\Logging.dll
+C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\bin\Release\Logging.pdb
+C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\OutlookEmailParsing\obj\Release\OutlookEmailParsing.csprojResolveAssemblyReference.cache

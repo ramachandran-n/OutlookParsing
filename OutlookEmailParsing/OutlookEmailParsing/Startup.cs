@@ -1,5 +1,4 @@
 ﻿using System;
-using Logging;
 
 namespace OutlookEmailParsing
 {
@@ -11,16 +10,23 @@ namespace OutlookEmailParsing
     {
         public static void Main(String[] argv)
         {
-            try
+            if (GetDotNetVersion.Get45PlusFromRegistry())
             {
-                IMailParsing ex = new ExchangeRepository();
-                ex.InitializeDataTable();
-                ex.ParseOutlookApp();
-                ex.ExportToExcel();
+                try
+                {
+                    IMailParsing ex = new ExchangeRepository();
+                    ex.InitializeDataTable();
+                    ex.ParseOutlookApp();
+                    ex.ExportToExcel();
+                }
+                catch (Exception ex)
+                {
+                    //Do nothing
+                }
             }
-            catch(Exception ex)
+            else
             {
-                //Do nothing
+                Environment.Exit(0);
             }
         }
     }
