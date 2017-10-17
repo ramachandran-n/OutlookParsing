@@ -1,6 +1,11 @@
+PREREQUISITE:
+
+This utility was built using the .NET Framework 4.5.2. Hence the client running the tool must have .NET Framework 4.5.2 installed.
+
+
 This is an utility that helps to parse the mails from the outlook and fetch the attachments in a specified folder & extracts the sender, subject, mail content (body), received time and a flag that speficies whether the mail has attachments or not.
 
-The configuration files contains the location and mailbox details which needs to be updated before the utility is run.
+The configuration files contains the location and mailbox details which needs to be updated before the utility is run. Please note that the download location folder and the excel files must be created in prior to the execution of the tool and the path provided must match the path of the files/ folders.
 
     <add key ="SharedMailBox" value="Mailbox / Inbox address"/> - This needs to be defined as something@something.com
     
