@@ -1,6 +1,6 @@
 PREREQUISITE:
 
-This utility was built using the .NET Framework 4.5.2. Hence the client running the tool must have .NET Framework 4.5.2 installed.
+This utility was built using the .NET Framework 4.5.2. Hence the client running the tool must have .NET Framework 4.5.2 or greater installed.
 
 This is helps to parse the mails from the outlook and fetch the attachments in a specified folder & extracts the sender, subject, mail content (body), received time and a flag that speficies whether the mail has attachments or not. (This flag just states whether the mail contains attachments and NOT whether multiple attachments are present. Also, if the mail has pictures / any media as part of the mail body the same is considered as an attachment and extracted)
 
