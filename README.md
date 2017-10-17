@@ -2,8 +2,9 @@ PREREQUISITE:
 
 This utility was built using the .NET Framework 4.5.2. Hence the client running the tool must have .NET Framework 4.5.2 installed.
 
+This is helps to parse the mails from the outlook and fetch the attachments in a specified folder & extracts the sender, subject, mail content (body), received time and a flag that speficies whether the mail has attachments or not. (This flag just states whether the mail contains attachments and NOT whether multiple attachments are present. Also, if the mail has pictures / any media as part of the mail body the same is considered as an attachment and extracted)
 
-This is an utility that helps to parse the mails from the outlook and fetch the attachments in a specified folder & extracts the sender, subject, mail content (body), received time and a flag that speficies whether the mail has attachments or not.
+The utility uses the Interop for Outlook and Excel applications and DOESN'T INCLUDE any 3rd party DLLs thus ensuring the safety and adhere the compliance and security policies of any organization. The Interop DLLs are installed as part of the .NET and the Office installations and doesn't need any manual installation unless specifically required (business cases may vary from user to user)
 
 The configuration files contains the location and mailbox details which needs to be updated before the utility is run. Please note that the download location folder and the excel files must be created in prior to the execution of the tool and the path provided must match the path of the files/ folders.
 
