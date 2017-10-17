@@ -2,13 +2,4 @@ C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Loggi
 C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Logging\bin\Release\Logging.pdb
 C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Logging\obj\Release\Logging.dll
 C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Logging\obj\Release\Logging.pdb
-C:\Users\Ramachandran\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Logging\bin\Release\Logging.dll
-C:\Users\Ramachandran\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Logging\bin\Release\Logging.pdb
-C:\Users\Ramachandran\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Logging\obj\Release\Logging.csprojResolveAssemblyReference.cache
-C:\Users\Ramachandran\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Logging\obj\Release\Logging.dll
-C:\Users\Ramachandran\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Logging\obj\Release\Logging.pdb
-C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\Logging\bin\Release\Logging.dll
-C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\Logging\bin\Release\Logging.pdb
-C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\Logging\obj\Release\Logging.csprojResolveAssemblyReference.cache
-C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\Logging\obj\Release\Logging.dll
-C:\Users\kmfh146\Source\Repos\OutlookParsing\OutlookEmailParsing\Logging\obj\Release\Logging.pdb
+C:\Users\kmfh146\Documents\Visual Studio 2013\Projects\OutlookEmailParsing\Logging\obj\Release\Logging.csprojResolveAssemblyReference.cache
