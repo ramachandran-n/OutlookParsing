@@ -12,5 +12,6 @@ namespace OutlookEmailParsing
         List<MailItem> ParseOutlookApp();
         void ExportToExcel();
         void InitializeDataTable();
+        void AddToTable(List<MailItem> mails);
     }
 }

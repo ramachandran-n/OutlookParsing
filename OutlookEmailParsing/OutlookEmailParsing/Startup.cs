@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logging;
+using System;
 
 namespace OutlookEmailParsing
 {
@@ -10,18 +11,20 @@ namespace OutlookEmailParsing
     {
         public static void Main(String[] argv)
         {
-            if (GetDotNetVersion.Get45PlusFromRegistry())
+            if (DotNetVersionFinder.Get45PlusFromRegistry())
             {
                 try
                 {
+                    Logger.LogMessage("Starting Utility", true);
                     IMailParsing ex = new ExchangeRepository();
                     ex.InitializeDataTable();
                     ex.ParseOutlookApp();
                     ex.ExportToExcel();
+                    Logger.LogMessage("Utility Completed Successfully", false);
                 }
                 catch (Exception ex)
                 {
-                    //Do nothing
+                    Logger.LogException(ex);
                 }
             }
             else

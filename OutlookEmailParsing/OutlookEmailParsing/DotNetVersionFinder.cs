@@ -1,10 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using Logging;
 namespace OutlookEmailParsing
 {
     //This code is originally from the Microsoft Documentation
@@ -12,18 +8,20 @@ namespace OutlookEmailParsing
     //https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed
     // Checking the version using >= will enable forward compatibility.
 
-    public class GetDotNetVersion
+    public class DotNetVersionFinder
     {
         public static bool Get45PlusFromRegistry()
         {
             const string subkey = @"SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\";
-
+            try
+            {
+                Logger.LogMessage("Checking the installed .NET Framework version", false);
                 using (RegistryKey ndpKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey(subkey))
                 {
                     if (ndpKey != null && ndpKey.GetValue("Release") != null)
                     {
                         string version = CheckFor45PlusVersion((int)ndpKey.GetValue("Release"));
-                        if(version.Length!= 0 && version != null)
+                        if (version.Length != 0 && version != null)
                         {
                             return true;
                         }
@@ -35,6 +33,13 @@ namespace OutlookEmailParsing
                         return false;
                     }
                 }
+                Logger.LogMessage(".NET Version validation", false);
+            }
+            catch(Exception ex)
+            {
+                Logger.LogException(ex);
+                return false;
+            }
         }
         private static string CheckFor45PlusVersion(int releaseKey)
         {

@@ -6,7 +6,6 @@ using System.Data;
 using Excel = Microsoft.Office.Interop.Excel;
 using Logging;
 
-
 namespace OutlookEmailParsing
 {
     /// <summary>
@@ -26,14 +25,23 @@ namespace OutlookEmailParsing
 
         public void AddToTable(List<MailItem> mails)
         {
-            foreach (MailItem m in mails)
+            try
             {
-                string mailSubject = m.Subject.ToString();
-                string mailSender = m.Sender.Name.ToString();
-                string mailBody = m.Body.ToString();
-                string receivedTime = m.ReceivedTime.ToShortDateString();
-                string attachment_count = m.Attachments.Count > 0 ? "Y" : "N";
-                tempTable.Rows.Add(mailSender, mailSubject, mailBody, receivedTime, attachment_count);
+                Logger.LogMessage("Adding the mail data to table",false);
+                foreach (MailItem m in mails)
+                {
+                    string mailSubject = m.Subject.ToString();
+                    string mailSender = m.Sender.Name.ToString();
+                    string mailBody = m.Body.ToString();
+                    string receivedTime = m.ReceivedTime.ToShortDateString();
+                    string attachment_count = m.Attachments.Count > 0 ? "Y" : "N";
+                    tempTable.Rows.Add(mailSender, mailSubject, mailBody, receivedTime, attachment_count);
+                }
+                Logger.LogMessage("Added the mail data to table completed", false);
+            }
+            catch(System.Exception ex)
+            {
+                Logger.LogException(ex);
             }
         }
 
@@ -45,31 +53,38 @@ namespace OutlookEmailParsing
         /// <param name="mails"></param>
         public void ExportToExcel()
         {
-            Excel.Application excelApp = new Excel.Application();
-
-            //Create an Excel workbook instance and open it from the predefined location
-            Excel.Workbook excelWorkBook = excelApp.Workbooks.Open(ConfigurationManager.AppSettings["ExcelPath"].ToString());
-
-            //Add a new worksheet to workbook with the Datatable name
-            Excel.Worksheet excelWorkSheet = excelWorkBook.Sheets.Add();
-            
-            for (int i = 1; i < tempTable.Columns.Count + 1; i++)
+            try
             {
-                excelWorkSheet.Cells[1, i] = tempTable.Columns[i - 1].ColumnName;
-            }
+                Logger.LogMessage("Writting data to excel", false);
+                Excel.Application excelApp = new Excel.Application();
 
-            for (int j = 0; j < tempTable.Rows.Count; j++)
-            {
-                for (int k = 0; k < tempTable.Columns.Count; k++)
+                //Create an Excel workbook instance and open it from the predefined location
+                Excel.Workbook excelWorkBook = excelApp.Workbooks.Open(ConfigurationManager.AppSettings["ExcelPath"].ToString());
+
+                //Add a new worksheet to workbook with the Datatable name
+                Excel.Worksheet excelWorkSheet = excelWorkBook.Sheets.Add();
+                for (int i = 1; i < tempTable.Columns.Count + 1; i++)
                 {
-                    excelWorkSheet.Cells[j + 2, k + 1] = tempTable.Rows[j].ItemArray[k].ToString();
+                    excelWorkSheet.Cells[1, i] = tempTable.Columns[i - 1].ColumnName;
                 }
-            }
-            excelWorkBook.Save();
-            excelWorkBook.Close();
-            excelApp.Quit();
-        }
 
+                for (int j = 0; j < tempTable.Rows.Count; j++)
+                {
+                    for (int k = 0; k < tempTable.Columns.Count; k++)
+                    {
+                        excelWorkSheet.Cells[j + 2, k + 1] = tempTable.Rows[j].ItemArray[k].ToString();
+                    }
+                }
+                excelWorkBook.Save();
+                excelWorkBook.Close();
+                excelApp.Quit();
+                Logger.LogMessage("Data writing to Excel Successfully", false);
+            }
+            catch(System.Exception ex)
+            {
+                Logger.LogException(ex);
+            }
+        }
 
         /// <summary>
         /// Created by Ramachandran Narayanan - 04 October 2017
@@ -78,11 +93,20 @@ namespace OutlookEmailParsing
         /// </summary>
         public void InitializeDataTable()
         {
-            tempTable.Columns.Add("Sender");
-            tempTable.Columns.Add("Subject");
-            tempTable.Columns.Add("Body");
-            tempTable.Columns.Add("ReceivedTime");
-            tempTable.Columns.Add("Contains_Attachments");
+            try
+            {
+                Logger.LogMessage("Initializing the Data Table", false);
+                tempTable.Columns.Add("Sender");
+                tempTable.Columns.Add("Subject");
+                tempTable.Columns.Add("Body");
+                tempTable.Columns.Add("ReceivedTime");
+                tempTable.Columns.Add("Contains_Attachments");
+                Logger.LogMessage("Table Initialized Successfully", false);
+            }
+            catch(System.Exception ex)
+            {
+                Logger.LogException(ex);
+            }
         }
 
         /// <summary>
@@ -95,6 +119,7 @@ namespace OutlookEmailParsing
         {
             try
             {
+                Logger.LogMessage("Outlook Parsing Started", false);
                 app = new Microsoft.Office.Interop.Outlook.Application();
                 ns = app.GetNamespace("MAPI");
                 ns.Logon(null, null, false, false);
@@ -136,15 +161,16 @@ namespace OutlookEmailParsing
                         }
                     }   
                 }
+                Logger.LogMessage("Parsing of outlook completed", false);
                 AddToTable(mails);
             }
             catch (System.Runtime.InteropServices.COMException ex)
             {
-                throw ex;
+                Logger.LogException(ex);
             }
             catch(System.Exception e)
             {
-                throw e;
+                Logger.LogException(e);
             }
             finally
             {
