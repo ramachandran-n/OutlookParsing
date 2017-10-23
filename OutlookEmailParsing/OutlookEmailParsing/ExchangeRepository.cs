@@ -28,12 +28,12 @@ namespace OutlookEmailParsing
         {
             foreach (MailItem m in mails)
             {
-                string mailSubject = m.Subject;
+                string mailSubject = m.Subject.ToString();
                 string mailSender = m.Sender.Name.ToString();
-                string mailBody = m.Body;
+                string mailBody = m.Body.ToString();
                 string receivedTime = m.ReceivedTime.ToShortDateString();
                 string attachment_count = m.Attachments.Count > 0 ? "Y" : "N";
-                tempTable.Rows.Add(mailSubject, mailSender, mailBody, receivedTime, attachment_count);
+                tempTable.Rows.Add(mailSender, mailSubject, mailBody, receivedTime, attachment_count);
             }
         }
 
